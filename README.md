@@ -1,24 +1,36 @@
 # my-portfolio
+### Running the Application Locally
 
-## Project setup
-```
+To run this application on your local machine, follow these steps:
+
+    Clone the Repository:
+
+    bash
+
+git clone https://github.com/yourusername/your-repo-name.git
+
+### Navigate to the Project Directory:
+
+bash
+
+cd your-repo-name
+
+### Install Dependencies:
+
+Make sure you have Node.js installed. Then run:
+
+bash
+
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+### Run the Application:
+
+After installing the dependencies, start the development server:
+
+bash
+
 npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Open the Application:
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Open your web browser and go to http://localhost:8080 (or the port specified in the terminal).
