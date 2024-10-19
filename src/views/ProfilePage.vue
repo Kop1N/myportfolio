@@ -15,7 +15,6 @@
     <section class="experience-section">
       <h3>Brief Introduction</h3>
       <div class="experience-item">
-        <h4>Senior Python Developer</h4>
         <p>As a driven and ambitious undergraduate in Computer Engineering from the Technological Institute of the Philippines, 
           I am eager to begin my professional journey. My passion for technology, coupled with a commitment to continuous learning and personal growth, 
           fuels my desire to acquire new knowledge and skills. With a strong foundation in communication, problem-solving, and proficiency in various software and programming languages,

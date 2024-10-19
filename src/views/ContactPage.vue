@@ -30,6 +30,8 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
   data() {
     return {
@@ -41,14 +43,45 @@ export default {
   },
   methods: {
     submitForm() {
-      // Implement form submission logic here
-      console.log("Form submitted with:", this.name, this.email, this.subject, this.message);
+      // Prepare email template data
+      const templateParams = {
+        from_name: this.name,
+        from_email: this.email,
+        subject_name: this.subject,
+        message: this.message,
+      };
+
+      // Send email via EmailJS
+      emailjs
+        .send(
+          "portfoliomessage1",      
+          "template_v7py2yt",     
+          templateParams,
+          "r9tqv6ZxpOpPxY_kp"          
+        )
+        .then(
+          (response) => {
+            console.log("Email sent successfully!", response.status, response.text);
+            alert("Message sent successfully!");
+
+            // Clear form inputs after successful submission
+            this.name = '';
+            this.email = '';
+            this.subject = '';
+            this.message = '';
+          },
+          (error) => {
+            console.log("Failed to send email.", error);
+            alert("Failed to send message.");
+          }
+        );
     },
   },
 };
 </script>
 
 <style scoped>
+/* Same styles as before */
 .contact-container {
   display: flex;
   justify-content: center;
