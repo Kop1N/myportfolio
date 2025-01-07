@@ -4,10 +4,10 @@
       <div class="navbar-content">
         <div class="logo">My Portfolio</div>
         <div class="nav-buttons">
-          <button @click="navigateTo('portfolio/profile')">Profile</button>
+          <button @click="navigateTo('profile')">Profile</button>
           <button @click="navigateTo('portfolio')">Portfolio</button>
-          <button @click="navigateTo('portfolio/contacts')">Contact</button>
-          <button @click="navigateTo('portfolio/creative')">Creative Page</button>
+          <button @click="navigateTo('contacts')">Contact</button>
+          <button @click="navigateTo('creative')">Creative Page</button>
           <button @click="handleLogout">Logout</button>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default {
   font-size: 24px;
   font-weight: bold;
   font-family: valo;
-  color: ;
+  color: 
 }
 
 .nav-buttons {

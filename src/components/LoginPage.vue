@@ -46,7 +46,7 @@ export default {
         this.$emit('login');
 
         // Redirect to portfolio dashboard
-        this.$router.push('/portfolio/profile');
+        this.$router.push('/profile');
       } else {
         // Show error message
         this.errorMessage = 'Incorrect username or password!';
