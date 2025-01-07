@@ -13,8 +13,10 @@
     <!-- Guessing Game Section -->
     <section class="game-section">
       <h3>Guessing Game</h3>
-      <input v-model="guess" type="number" placeholder="Enter a number between 1-100" />
-      <button @click="makeGuess">Submit Guess</button>
+      <div class="game-input">
+        <input v-model="guess" type="number" placeholder="Enter a number between 1-100" />
+        <button @click="makeGuess">Submit Guess</button>
+      </div>
       <p>{{ feedback }}</p>
     </section>
   </div>
@@ -50,58 +52,36 @@ export default {
   font-family: Arial, sans-serif;
   color: #fff;
   background-color: #1f1f1f;
-  padding: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 section {
   margin-bottom: 50px;
-}
-
-/* Skills Section */
-.secret h3{
-  font-family: valo;
-  font-size: 28px;
-  color: #f9c74f;
-  transition: color 0.3s ease;
-}
-.skills-section h3,
-.experience-section h3,
-.testimonial-section h3,
-.game-section h3 {
-  font-size: 28px;
-  color: #f9c74f;
-  transition: color 0.3s ease;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.skill-card {
-  background-color: #2b2b2b;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.skill-card:hover {
-  background-color: #f9c74f;
-  transform: scale(1.05);
-  color: #1f1f1f;
+  width: 80%; /* Container width for better centering */
+  max-width: 900px; /* Max width for larger screens */
 }
 
 /* Portfolio Section */
+.secret h3 {
+  font-family: valo;
+  font-size: 28px;
+  color: #f9c74f;
+  text-align: center;
+}
+
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
-.portfolio-item1 {
+.portfolio-item1, .portfolio-item2, .portfolio-item3 {
   background-color: #2b2b2b;
   height: 200px;
   border-radius: 10px;
@@ -109,48 +89,35 @@ section {
   cursor: pointer;
 }
 
-.portfolio-item1:hover {
+.portfolio-item1:hover, .portfolio-item2:hover, .portfolio-item3:hover {
   background-color: #f9c74f;
   transform: scale(1.05);
 }
-.portfolio-item1:active{
+
+.portfolio-item1:active {
   background-image: url("/src/assets/cat3.png");
-  transform: scale(1.05);
-}
-.portfolio-item2 {
-  background-color: #2b2b2b;
-  height: 200px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
 }
 
-.portfolio-item2:hover {
-  background-color: #f9c74f;
-  transform: scale(1.05);
-}
-.portfolio-item2:active{
+.portfolio-item2:active {
   background-image: url("/src/assets/cat2.jpg");
-  transform: scale(1.05);
-}
-.portfolio-item3 {
-  background-color: #2b2b2b;
-  height: 200px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
 }
 
-.portfolio-item3:hover {
-  background-color: #f9c74f;
-  opacity: 0.7;
-  transform: scale(1.05);
-}
-.portfolio-item3:active{
+.portfolio-item3:active {
   background-image: url("/src/assets/cat.jpg");
-  transform: scale(1.05);
 }
 
+/* Game Section */
+.game-section h3 {
+  font-size: 28px;
+  color: #f9c74f;
+  text-align: center;
+}
+
+.game-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 .game-section input {
   padding: 10px;
@@ -158,6 +125,7 @@ section {
   border: none;
   margin-right: 10px;
   width: 250px;
+  font-size: 16px;
 }
 
 .game-section button {
@@ -174,18 +142,54 @@ section {
   background-color: #ffc107;
 }
 
-/* Testimonial Section */
-.testimonial {
-  background-color: #2b2b2b;
-  padding: 20px;
-  border-radius: 10px;
+.game-section p {
   text-align: center;
-}
-
-.testimonial-author {
-  margin-top: 10px;
-  font-style: italic;
+  font-size: 18px;
   color: #f9c74f;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr; /* Two items per row on medium screens */
+  }
+
+  .portfolio-item1, .portfolio-item2, .portfolio-item3 {
+    height: 150px;
+  }
+
+  .game-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-section input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .game-section button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item1, .portfolio-item2, .portfolio-item3 {
+    height: 120px;
+  }
+
+  .game-section input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .game-section button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .game-section p {
+    font-size: 16px;
+  }
+}
 </style>

@@ -8,7 +8,6 @@
           <button @click="navigateTo('portfolio')">Portfolio</button>
           <button @click="navigateTo('contacts')">Contact</button>
           <button @click="navigateTo('creative')">Creative Page</button>
-          <button @click="handleLogout">Logout</button>
         </div>
       </div>
     </nav>

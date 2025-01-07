@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     submitForm() {
-      // Prepare email template data
       const templateParams = {
         from_name: this.name,
         from_email: this.email,
@@ -51,20 +50,19 @@ export default {
         message: this.message,
       };
 
-      // Send email via EmailJS
       emailjs
         .send(
           "portfoliomessage1",      
           "template_v7py2yt",     
           templateParams,
-          "r9tqv6ZxpOpPxY_kp"          
+          "r9tqv6ZxpOpPxY_kp"
         )
         .then(
           (response) => {
             console.log("Email sent successfully!", response.status, response.text);
             alert("Message sent successfully!");
 
-            // Clear form inputs after successful submission
+            // Clear form after submission
             this.name = '';
             this.email = '';
             this.subject = '';
@@ -81,22 +79,24 @@ export default {
 </script>
 
 <style scoped>
-/* Same styles as before */
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px;
+  padding: 20px;
   background-color: #1f1f1f;
+  flex-direction: column; /* Stack elements by default */
 }
 
-.contact-form-section, .contact-info-section {
+.contact-form-section,
+.contact-info-section {
   background-color: #333;
   color: white;
   padding: 40px;
   border-radius: 8px;
-  width: 40%;
-  margin: 0 10px;
+  width: 100%;
+  max-width: 500px; /* Ensure sections are not too wide */
+  margin: 10px 0;
 }
 
 .contact-form-section {
@@ -107,13 +107,15 @@ export default {
 h2 {
   color: white;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .form-group {
   margin-bottom: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: none;
@@ -123,7 +125,8 @@ input, textarea {
   font-size: 14px;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #bbb;
 }
 
@@ -138,6 +141,7 @@ textarea {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .btn-submit:hover {
@@ -162,5 +166,34 @@ ul li {
 ul li strong {
   font-weight: bold;
   margin-right: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row; /* Side by side layout on larger screens */
+  }
+
+  .contact-form-section,
+  .contact-info-section {
+    width: 45%; /* Take up 45% width for each section */
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Adjust font size on smaller screens */
+  }
+
+  .btn-submit {
+    font-size: 16px; /* Ensure button text is large enough for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Make headings smaller on mobile */
+  }
 }
 </style>
