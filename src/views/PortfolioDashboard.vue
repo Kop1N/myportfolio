@@ -2,34 +2,34 @@
   <div class="dashboard-container">
     <!-- Skills Section -->
     <section class="skills-section">
-      <h3>My Skills</h3>
+      <h3>MY SKILLS</h3>
       <div class="skills-grid">
-        <div class="skill-card">Python: Proficient in writing clean, efficient, 
-          and scalable code for data analysis, automation, and web development.</div>
-        <div class="skill-card">JavaScript: Skilled in building dynamic and interactive 
-          front-end applications, handling asynchronous operations, and integrating APIs.</div>
-        <div class="skill-card">Vue: Experienced in developing modular, maintainable, and reactive 
-          user interfaces with Vue.js, leveraging its component-based structure.</div>
-        <div class="skill-card">React: Proficient in building complex, high-performance web applications using React, 
-          with a focus on component reusability and state management.</div>
-        <div class="skill-card">UI/UX Design: Knowledgeable in designing user-centered interfaces with an emphasis on 
-          enhancing user experience through usability testing and interaction design.</div>
-        <div class="skill-card">API Development: Experienced in creating and consuming RESTful APIs, ensuring secure and efficient 
-          communication between front-end and back-end systems.</div>
+        <div class="skill-card">C / C+</div>
+        <div class="skill-card">C#</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">Javascript</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Web Development</div>
+        <div class="skill-card">VueJS</div>
+        <div class="skill-card">ReactJS</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">Git</div>
       </div>
     </section>
 
     <!-- Portfolio Section -->
     <section class="portfolio-section">
-      <h3>Portfolio</h3>
+      <h3>PROJECTS</h3>
       <div class="portfolio-grid">
         <!-- Portfolio Item 1 -->
-        <div class="portfolio-item" @click="downloadResume">
-          <img :src="require('@/assets/project1.jpg')" alt="Project 1" />
+        <div class="portfolio-item" @click="downloadPortfolio1">
+          <img :src="require('@/assets/project1.png')" alt="Project 1" />
         </div>
         <!-- Portfolio Item 2 -->
-        <div class="portfolio-item" @click="downloadResume">
-          <img :src="require('@/assets/project2.jpg')" alt="Project 2" />
+        <div class="portfolio-item" @click="downloadPortfolio2">
+          <img :src="require('@/assets/project2.png')" alt="Project 2" />
         </div>
         <!-- Portfolio Item 3 -->
         <div class="portfolio-item" @click="downloadResume">
@@ -40,18 +40,24 @@
 
     <!-- Experience Section -->
     <section class="experience-section">
-      <h3>Experience</h3>
+      <h3>Experiences</h3>
       <div class="experience-item">
-        <h4>Main Project Python Developer</h4>
-        <p>Developed small scale apps and supporting algorithm making Object Oriented Projects.</p>
+        <h4>Freelance IT Technician</h4>
+        <p>Diagnosed and troubleshot hardware and software issues for laptops and desktops.
+Performed repairs, system optimizations, and application installations to enhance performance.
+Conducted system cleanups and maintenance to ensure efficient device operation.
+Provided customer support by guiding clients through technical solutions and best practices.</p>
       </div>
       <div class="experience-item">
-        <h4>UI/UX Project Decoration</h4>
-        <p>Collaborated with teams to improve user interface and user experience on websites and apps.</p>
+        <h4>Private Mathematics Tutor</h4>
+        <p>Provided one-on-one virtual tutoring in Algebra and Geometry via the FLVS platform, helping the student
+improve grades and test scores.
+Strengthened the student’s understanding of concepts and boosted confidence in problem-solving.
+Designed tailored lesson plans and used interactive tools to enhance the learning experience.</p>
       </div>
       <div class="experience-item">
         <h4>Vue Js Web Developing</h4>
-        <p>Created this website using vue.js from scratch.</p>
+        <p>Created this website using vue.js</p>
       </div>
     </section>
 
@@ -72,12 +78,27 @@ export default {
   methods: {
     downloadResume() {
       const link = document.createElement('a');
-      link.href = '/Resume.pdf'; // Directly from public folder
-      link.download = 'Resume.pdf'; 
+      link.href = '/Resume.pdf'; 
+      link.download = 'Resume.pdf';
       link.click();
     },
+    downloadPortfolio1() {
+      const link = document.createElement('a');
+      link.href = '/project1.pdf'; 
+      link.download = 'project1.pdf';
+      link.click();
+    },
+    downloadPortfolio2() { 
+      const link = document.createElement('a');
+      link.href = '/project2.pdf'; 
+      link.download = 'project2.pdf';
+      link.click();
+    }
   },
 };
+
+
+
 </script>
 
 <style scoped>

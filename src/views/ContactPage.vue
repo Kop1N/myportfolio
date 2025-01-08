@@ -1,7 +1,7 @@
 <template>
   <div class="contact-container">
     <div class="contact-form-section">
-      <h2>Write us</h2>
+      <h2>Write an email</h2>
       <form @submit.prevent="submitForm">
         <div class="form-group">
           <input v-model="name" type="text" placeholder="Name" required />
@@ -21,9 +21,9 @@
     <div class="contact-info-section">
       <h2>Contact Information</h2>
       <ul>
-        <li>Technological Institute of the Philippines - Arlegui Campus, 1338 Arlegui St, Quiapo, Manila, 1001 Metro Manila</li>
-        <li><strong>Phone:</strong> +639611157337</li>
-        <li><strong>Email:</strong> mjcmutuc@tip.edu.ph</li>
+        <li><strong>Address:</strong>#16 Flor de liz st, Maripas subdivision. Paliwas Obando Bulacan</li>
+        <li><strong>Phone:</strong> +639-913-009-389</li>
+        <li><strong>Email:</strong> mjcmutuc@tip.edu.ph / johncarlomutuc@gmail.com</li>
       </ul>
     </div>
   </div>
@@ -85,7 +85,7 @@ export default {
   align-items: center;
   padding: 20px;
   background-color: #1f1f1f;
-  flex-direction: column; /* Stack elements by default */
+  flex-direction: column; 
 }
 
 .contact-form-section,
@@ -95,7 +95,7 @@ export default {
   padding: 40px;
   border-radius: 8px;
   width: 100%;
-  max-width: 500px; /* Ensure sections are not too wide */
+  max-width: 500px; 
   margin: 10px 0;
 }
 
@@ -168,16 +168,16 @@ ul li strong {
   margin-right: 10px;
 }
 
-/* Media Queries for Responsiveness */
+
 
 @media (min-width: 768px) {
   .contact-container {
-    flex-direction: row; /* Side by side layout on larger screens */
+    flex-direction: row;
   }
 
   .contact-form-section,
   .contact-info-section {
-    width: 45%; /* Take up 45% width for each section */
+    width: 45%; 
     margin: 0 10px;
   }
 }
@@ -185,15 +185,15 @@ ul li strong {
 @media (max-width: 480px) {
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* Adjust font size on smaller screens */
+    font-size: 16px; 
   }
 
   .btn-submit {
-    font-size: 16px; /* Ensure button text is large enough for mobile */
+    font-size: 16px; 
   }
 
   h2 {
-    font-size: 1.5rem; /* Make headings smaller on mobile */
+    font-size: 1.5rem;
   }
 }
 </style>

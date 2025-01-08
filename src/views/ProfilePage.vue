@@ -2,7 +2,6 @@
   <div class="dashboard-container">
     <!-- Profile Section -->
     <section class="profile-section">
-      <div class="profile-image"></div>
       <div class="profile-info">
         <h1>Mr. John Carlo Mutuc</h1>
         <h2>COMPUTER ENGINEER</h2>
@@ -12,7 +11,7 @@
 
     <!-- Experience Section -->
     <section class="experience-section">
-      <h3>Brief Introduction</h3>
+      <h3>BRIEF INTRODUCTION</h3>
       <div class="experience-item">
         <p>As a driven and ambitious undergraduate in Computer Engineering from the Technological Institute of the Philippines, 
           I am eager to begin my professional journey. My passion for technology, coupled with a commitment to continuous learning and personal growth, 
@@ -23,11 +22,10 @@
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
-      <h3>Achievements</h3>
+      <h3>OBJECTIVES</h3>
       <div class="testimonial">
-        <p>"I am continuously striving toward further goals, including advanced certifications in programming and network administration,
-          as well as expanding my expertise in 
-          emerging technologies to stay at the forefront of industry developments."</p>
+        <p>"To leverage my skills in programming, and software development to create innovative and engaging
+          solutions, while continuously learning and contributing to the growth of a dynamic team."</p>
       </div>
     </section>
 
@@ -89,9 +87,9 @@ section {
 .profile-image {
   background: url('/src/assets/profile.png') no-repeat center center;
   background-size: cover;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 20%;
 }
 
 .profile-info {
@@ -159,8 +157,8 @@ section {
   }
 
   .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 12px;
+    height: 12px;
   }
 
   .profile-info h1 {

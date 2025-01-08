@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar" v-if="$route.path !== '/login'">
+    <nav class="navbar">
       <div class="navbar-content">
         <div class="logo">My Portfolio</div>
         <div class="nav-buttons">
@@ -23,10 +23,6 @@ export default {
     navigateTo(page) {
       this.$router.push({ path: `/${page}` });
     },
-    handleLogout() {
-      localStorage.removeItem('user'); // Clear user info from local storage
-      this.$router.push({ name: 'Login' }); // Redirect to login page
-    },
   },
 };
 </script>
@@ -35,8 +31,8 @@ export default {
 #app {
   text-align: center;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Light background for the dashboard */
-  min-height: 100vh; /* Full height */
+  background-color: #f4f4f4; 
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +59,7 @@ export default {
 
 .nav-buttons {
   display: flex;
-  gap: 15px; /* Space between buttons */
+  gap: 15px; 
 }
 
 .nav-buttons button {
@@ -81,7 +77,7 @@ export default {
 }
 
 .main-content {
-  flex-grow: 1; /* Fill remaining space */
+  flex-grow: 1;
   padding: 20px;
 }
 </style>
