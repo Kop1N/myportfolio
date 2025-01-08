@@ -83,9 +83,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 200px;
   background-color: #1f1f1f;
   flex-direction: column; 
+  margin: -10px;
 }
 
 .contact-form-section,

@@ -2,7 +2,9 @@
   <div id="app">
     <nav class="navbar">
       <div class="navbar-content">
-        <div class="logo">My Portfolio</div>
+        <div class="logo">
+          <span class="typing-animation">Hi, I am John Carlo Mutuc</span>
+        </div>
         <div class="nav-buttons">
           <button @click="navigateTo('profile')">Profile</button>
           <button @click="navigateTo('portfolio')">Portfolio</button>
@@ -28,20 +30,27 @@ export default {
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   text-align: center;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; 
-  min-height: 100vh; 
+  background-color: transparent;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .navbar {
   background-color: #333;
-  padding: 15px;
+  padding: 30px;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: -10px; 
 }
 
 .navbar-content {
@@ -54,12 +63,41 @@ export default {
   font-size: 24px;
   font-weight: bold;
   font-family: valo;
-  color: 
+  color: white;
+  position: relative;
+}
+
+.typing-animation {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Cursor effect */
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 .nav-buttons {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
 }
 
 .nav-buttons button {
@@ -78,6 +116,7 @@ export default {
 
 .main-content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
 }
 </style>

@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import PortfolioDashboard from '../views/PortfolioDashboard.vue';
 import ContactPage from '../views/ContactPage.vue';
-import PortfolioShowcase from '../views/PortfolioShowcase.vue';
 import ProfilePage from '../views/ProfilePage.vue';
 import CreativePage from '../views/CreativePage.vue';
 
@@ -19,12 +18,6 @@ const routes = [
     path: '/contacts',
     name: 'contacts',
     component: ContactPage,
-    meta: { requiresAuth: true }, // Add requiresAuth meta field
-  },
-  {
-    path: '/showcase',
-    name: 'showcase',
-    component: PortfolioShowcase,
     meta: { requiresAuth: true }, // Add requiresAuth meta field
   },
   {

@@ -11,7 +11,7 @@
 
     <!-- Experience Section -->
     <section class="experience-section">
-      <h3>BRIEF INTRODUCTION</h3>
+      <h3>BRIEF</h3>
       <div class="experience-item">
         <p>As a driven and ambitious undergraduate in Computer Engineering from the Technological Institute of the Philippines, 
           I am eager to begin my professional journey. My passion for technology, coupled with a commitment to continuous learning and personal growth, 
@@ -47,7 +47,13 @@ export default {
 </script>
 
 <style scoped>
-
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 @keyframes colorChange {
   0% {
     color: #ff4b2b;
@@ -71,6 +77,7 @@ export default {
   color: #fff;
   background-color: #1f1f1f;
   padding: 20px;
+  margin: -10px;
 }
 
 section {
@@ -200,7 +207,8 @@ section {
   }
 
   .dashboard-container {
-    padding: 10px;
+    padding: 0px;
+    margin: 0px;
   }
 }
 

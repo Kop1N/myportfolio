@@ -58,6 +58,7 @@ export default {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  margin: -10px;
 }
 
 section {

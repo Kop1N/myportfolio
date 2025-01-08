@@ -108,6 +108,7 @@ export default {
   color: #fff;
   background-color: #1f1f1f;
   padding: 20px;
+  margin: -10px;
 }
 
 section {
